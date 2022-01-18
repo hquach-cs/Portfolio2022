@@ -1,11 +1,15 @@
 import "./App.css";
+import styled from "styled-components";
+import Nav from "./components/nav/Nav.js";
+import Icons from "./components/nav/Icons.js";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <h1>Hello World!</h1>
-    </div>
+    <Wrapper className="app">
+      <Nav></Nav>
+      <Icons></Icons>
+    </Wrapper>
   );
 }
 
-export default App;
+const Wrapper = styled.div``;
