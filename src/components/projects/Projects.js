@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Project from "./Project.js";
+import ProjectL from "./ProjectL.js";
+import ProjectR from "./ProjectR.js";
+
 import PropTypes from "prop-types";
 
 const Projects = (props) => {
@@ -11,14 +13,18 @@ const Projects = (props) => {
         <TitleLine></TitleLine>
       </TitleWrapper>
       <ProjectsWrapper>
-        <Project></Project>
+        <ProjectL></ProjectL>
+        <ProjectR></ProjectR>
       </ProjectsWrapper>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  margin: 0 275px;
+  margin: 0 20%;
+  @media (max-width: 899px) {
+    margin: 0 35px;
+  }
 `;
 
 const TitleWrapper = styled.div`
@@ -30,6 +36,7 @@ const Title = styled.h2`
   font-weight: normal;
   letter-spacing: 1.25px;
   font-size: 18px;
+  white-space: nowrap;
 `;
 
 const TitleLine = styled.div`
@@ -39,7 +46,9 @@ const TitleLine = styled.div`
   margin-top: 1.5px;
 `;
 
-const ProjectsWrapper = styled.div``;
+const ProjectsWrapper = styled.div`
+  padding-top: 25px;
+`;
 
 Projects.propTypes = {};
 

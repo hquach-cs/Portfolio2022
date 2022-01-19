@@ -46,6 +46,9 @@ const IconsWrapper = styled.div`
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
+  @media (max-width: 899px) {
+    left: 25px;
+  }
 `;
 
 const Icon = styled.a`
@@ -73,6 +76,9 @@ const Email = styled.h3`
   transform: translate(-50%, -50%) rotate(-90deg);
   font-size: 10px;
   letter-spacing: 0.2em;
+  @media (max-width: 899px) {
+    left: 25px;
+  }
 `;
 
 const EmailLine = styled.div`
@@ -81,6 +87,9 @@ const EmailLine = styled.div`
   left: 2.9%;
   border-left: 1px solid black;
   height: 400px;
+  @media (max-width: 899px) {
+    left: 25px;
+  }
 `;
 
 export default Icons;

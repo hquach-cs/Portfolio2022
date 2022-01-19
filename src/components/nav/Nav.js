@@ -23,14 +23,17 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 275px;
+  margin: 0 20%;
+  @media (max-width: 899px) {
+    margin: 0 35px;
+  }
 `;
 
 const Logo = styled.a``;
 
 const LinksWrapper = styled.div`
   float: right;
-  @media (max-width: 1000px) {
+  @media (max-width: 899px) {
     display: none;
   }
 `;
