@@ -56,10 +56,12 @@ const Icon = styled.a`
 const IconImg = styled.img`
   width: 32px;
   height: 32px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px gray;
   &:hover {
     background-color: lightgreen;
+    box-shadow: 0 0 10px lightgreen;
   }
-  border-radius: 50%;
 `;
 
 const EmailWrapper = styled.div``;
