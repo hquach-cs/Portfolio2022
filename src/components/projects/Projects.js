@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import ProjectL from "./ProjectL.js";
 import ProjectR from "./ProjectR.js";
-
+import "./projects.css";
 import PropTypes from "prop-types";
 
 const Projects = (props) => {

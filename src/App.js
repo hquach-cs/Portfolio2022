@@ -10,6 +10,7 @@ export default function App() {
       <Nav></Nav>
       <Icons></Icons>
       <Main>
+        <Header></Header>
         <Projects></Projects>
       </Main>
     </Wrapper>
@@ -17,5 +18,9 @@ export default function App() {
 }
 
 const Wrapper = styled.div``;
+
+const Header = styled.div`
+  height: 100vh;
+`;
 
 const Main = styled.main``;

@@ -1,10 +1,24 @@
 import React from "react";
 import styled from "styled-components";
+import "./projects.css";
 import PropTypes from "prop-types";
 
 const ProjectR = (props) => {
+  const [isVisible, setVisible] = React.useState(false);
+  const domRef = React.useRef();
+  React.useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setVisible(entry.isIntersecting);
+        }
+      });
+    });
+    observer.observe(domRef.current);
+    return () => observer.unobserve(domRef.current);
+  });
   return (
-    <Wrapper>
+    <div className={`fade-in ${isVisible ? "visible" : ""}`} ref={domRef}>
       <PictureWrapper></PictureWrapper>
 
       <TextWrapper>
@@ -26,7 +40,7 @@ const ProjectR = (props) => {
           <Skill>Placeholder</Skill>
         </Skills>
       </TextWrapper>
-    </Wrapper>
+    </div>
   );
 };
 
